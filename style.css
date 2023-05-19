@@ -1,0 +1,18 @@
+h1 {
+	color: blue;
+}
+
+.row {
+	display: flex;
+	margin-bottom: 10px;
+}
+
+.col {
+	justify-content: start;
+}
+
+.container{
+	border: 1px black solid;
+	width: 50%;
+	height: 300px;
+}
