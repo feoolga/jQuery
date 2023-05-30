@@ -5,51 +5,111 @@
 	<meta charset="UTF-8">
 	<meta http-equiv="X-UA-Compatible" content="IE=edge">
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
-	<link rel="stylesheet" href="style.css">
+	<link rel="stylesheet" href="css/style.css">
+	<link rel="stylesheet" href="css/style_null.css">
+	<link rel="stylesheet" href="css/viget_weater.css">
+	<link rel="preconnect" href="https://fonts.googleapis.com">
+	<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+	<link rel="preconnect" href="https://fonts.googleapis.com">
+	<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+	<link
+		href="https://fonts.googleapis.com/css2?family=Amatic+SC&family=Caveat:wght@600&family=Comforter&family=Open+Sans:wght@300&family=Pacifico&display=swap"
+		rel="stylesheet">
 	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
 	<title>Document</title>
 </head>
 
 <body>
-	<div>
-		<h1>Привет</h1>
-	</div>
-	<div class="buttn"> Hello</div>
-	<div>
-		<ul>
-			<li>1</li>
-			<li>2</li>
-			<li>3</li>
-		</ul>
-	</div>
-	<div>
-		<form action="">
-			<div class="row">
-				<div class="col">
-					<input type="checkbox" id="chek1">
-				</div>
-				<div class="col">
-					<input type="text" id="input1" disabled>
+	<div class="wrapper">
+		<div class="top">
+			<div class="container"></div>
+		</div>
+		<div class="header">
+			<div class="container">Дорогие друзья, приглашаем вас в гости к нам на дачу</div>
+		</div>
+		<div class="time">
+			<div class="container">
+				<p>
+					Будем рады видеть вас в любое время с 1 июня по 31 августа
+				</p>
+				<p>
+					(рекомендуем ориентироваться на <a href=""><span class="time__weather modal-link">погоду</span></a>)
+				</p>
+				<table id="calendar">
+					<thead>
+						<tr>
+							<td>‹</td>
+							<td colspan="5"></td>
+							<td>›</td>
+						</tr>
+						<tr>
+							<td>Пн</td>
+							<td>Вт</td>
+							<td>Ср</td>
+							<td>Чт</td>
+							<td>Пт</td>
+							<td>Сб</td>
+							<td>Вс</td>
+						</tr>
+					</thead>
+					<tbody></tbody>
+				</table>
+			</div>
+		</div>
+		<div class="timing">
+			<div class="container">
+				<p class="title">В программе (исключительно по желанию):</p>
+				<!-- <ul class="list">
+					<li class="timing__walk"><img src="img/list/1.jpg" alt="" class="img"><span class="text">Прогулки на
+							природе</span>
+					</li>
+					<li class="timing__bicycle"><img src="" alt="" class="img"><span class="text">Катание на
+							велосипедах</span></li>
+					<li class="timing__swimming"><img src="" alt="" class="img"><span class="text">Купание в речке</span>
+					</li>
+					<li class="timing__lemonade"><img src="" alt="" class="img"><span class="text">Домашний лимонад</span>
+					</li>
+					<li class="timing__vitamins"><img src="" alt="" class="img"><span class="text">Живые витамины</span></li>
+					<li class="timing__film"><img src="" alt="" class="img"><span class="text">Вечерний фильм</span></li>
+					<li class="timing__games"><img src="" alt="" class="img"><span class="text">Настольные игры</span></li>
+					<li class="timing__volleyball"><img src="" alt="" class="img"><span class="text">Воллейбол,
+							бадминтон</span></li>
+					<li class="timing__trip"><img src="" alt="" class="img"><span class="text">Поездка куда-нибудь, куда
+							захочется</span></li>
+				</ul> -->
+				<div class="list">
+					<div class="col modal-link timing__walk"><span class="text">Прогулки на
+							природе</span>
+					</div>
+					<div class="col modal-link timing__bicycle"><span class="text">Катание на
+							велосипедах</span></div>
+					<div class="col modal-link timing__swimming"><span class="text">Купание в
+							речке</span>
+					</div>
+					<div class="col modal-link timing__lemonade"><span class="text">Домашний
+							лимонад</span>
+					</div>
+					<div class="col modal-link timing__vitamins"><span class="text">Живые витамины</span>
+					</div>
+					<div class="col modal-link timing__film"><span class="text">Вечерний фильм</span>
+					</div>
+					<div class="col modal-link timing__games"><span class="text">Настольные игры</span>
+					</div>
+					<div class="col modal-link timing__volleyball"><span class="text">Воллейбол,
+							бадминтон</span></div>
+					<div class="col modal-link tea__time"><span class="text">Задушевные беседы за
+							чашечкой
+							чая</span></div>
+					<div class="col modal-link timing__trip"><span class="text">Поездка куда-нибудь, куда
+							захочется</span></div>
 				</div>
 			</div>
-
-			<div class="row">
-				<div class="col">
-					<input type="checkbox" id="chek2">
-				</div>
-				<div class="col">
-					<input type="text" id="input2" disabled>
-				</div>
-			</div>
-			<div id="btn">Картинки</div>
-		</form>
+		</div>
+		<div id="weather" class="viget"></div>
 	</div>
 
-	<div class="container">
-
-	</div>
-
-	<script src="script.js"></script>
+	<script src="js/script.js"></script>
+	<script src="js/modal_weather.js"></script>
 </body>
 
 </html>

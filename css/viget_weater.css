@@ -1,0 +1,50 @@
+.viget{
+	position: fixed;
+	max-width: 75%;
+	color: azure;
+	background-color: rgb(80, 105, 3);
+	border-radius: 10px;
+	margin: 30px auto;
+	font-family: 'Comforter', cursive;
+	font-family: 'Open Sans', sans-serif;
+	padding: 20px;
+	opacity: 0;
+	visibility: hidden;
+	overflow-y: auto;
+	overflow-x: hidden;
+	transition: all 0.8s ease 0s;
+}
+
+.viget.open{
+	opacity: 1;
+	visibility: visible;
+}
+
+.viget div{
+	margin: 20px 0;
+}
+
+.loading {
+	display: flex;
+	justify-content: center;
+	align-items: end;
+		/* border: 1px solid black; */
+}
+
+.loading img{
+	width: 100px;
+}
+
+.icon{
+	width: 70px;
+}
+
+.city{
+	font-size: 35px;
+	font-weight: 900;
+}
+
+.temper::after{
+	content: '0';
+	font-size:0.5em; vertical-align:top;
+}
