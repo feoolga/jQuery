@@ -33,7 +33,7 @@
 					Будем рады видеть вас в любое время с 1 июня по 31 августа
 				</p>
 				<p>
-					(рекомендуем ориентироваться на <a href=""><span class="time__weather modal-link">погоду</span></a>)
+					(рекомендуем ориентироваться на <a href="#modal"><span class="time__weather modal-link">погоду</span></a>)
 				</p>
 				<table id="calendar">
 					<thead>
@@ -78,8 +78,10 @@
 							захочется</span></li>
 				</ul> -->
 				<div class="list">
-					<div class="col modal-link timing__walk"><span class="text">Прогулки на
-							природе</span>
+					<div class="col modal-link timing__walk">
+						<a href="#modal">
+							<span class="text">Прогулки на природе</span>
+						</a>
 					</div>
 					<div class="col modal-link timing__bicycle"><span class="text">Катание на
 							велосипедах</span></div>
@@ -105,7 +107,9 @@
 				</div>
 			</div>
 		</div>
-		<div id="weather" class="viget"></div>
+		<div class="modal" id="modal">
+			<div id="weather" class="viget"></div>
+		</div>
 	</div>
 
 	<script src="js/script.js"></script>
