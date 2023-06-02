@@ -1,6 +1,6 @@
 .wrapper{
-	max-width: 110%;
-	height: 100%;
+	max-width: 100%;
+	/* height: 100%; */
 	font-family: 'Caveat', cursive;
 	font-size: 30px;
 	color: white;
@@ -68,8 +68,6 @@
 }
 
 .list{
-	/* padding-left: 10px; */
-	box-sizing: border-box;
 	width: 100%;
 	/* border: 1px solid black; */
 	/* padding: 0 15px; */
@@ -79,7 +77,6 @@
 }
 
 .col{
-	/* box-sizing: border-box; */
 	height: 80px;
 	position: relative;
 	font-family: 'Amatic', cursive;
@@ -206,7 +203,6 @@
 	opacity: 0;
 	visibility: hidden;
 }
-
 
 /* Календарь */
 #calendar {
