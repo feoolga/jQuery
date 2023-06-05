@@ -40,7 +40,9 @@ function modalOpen(currentModal) {
         }
         currentModal.classList.add(".open")
         currentModal.addEventListener("click", function (e) {
-            if (!e.target.closest(''))
+            if (!e.target.closest('.modal__content')){
+                modalClose(e.target.closest('.modal'))
+            }
         })
     }
 

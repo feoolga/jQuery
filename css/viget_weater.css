@@ -8,6 +8,8 @@
 	font-family: 'Comforter', cursive;
 	font-family: 'Open Sans', sans-serif;
 	padding: 20px;
+	opacity: 0;
+	visibility: hidden;
 	overflow-y: auto;
 	overflow-x: hidden;
 	transition: all 0.8s ease 0s;
