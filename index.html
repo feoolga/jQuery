@@ -1,139 +1,170 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="ru">
 
 <head>
 	<meta charset="UTF-8">
 	<meta http-equiv="X-UA-Compatible" content="IE=edge">
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
 	<link rel="stylesheet" href="css/style.css">
-	<link rel="stylesheet" href="css/style_null.css">
-	<link rel="stylesheet" href="css/viget_weater.css">
+	<link rel="icon" href="icon.png">
+	<link rel="icon" href="img/icons/icons8-лес-color-32.png" type="image/png">
 	<link rel="preconnect" href="https://fonts.googleapis.com">
 	<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-	<link rel="preconnect" href="https://fonts.googleapis.com">
-	<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-	<link
-		href="https://fonts.googleapis.com/css2?family=Amatic+SC&family=Caveat:wght@600&family=Comforter&family=Open+Sans:wght@300&family=Pacifico&display=swap"
-		rel="stylesheet">
+	<link href="https://fonts.googleapis.com/css2?family=Caveat&family=Neucha&display=swap" rel="stylesheet">
 	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
-	<title>Document</title>
+	<title>Приглашение</title>
 </head>
 
 <body>
 	<div class="wrapper">
 		<header>
-			<div class="container">
-				<nav class="row">
-					<div><a href="">Программа развлечений</a></div>
-					<div><a href="">Контакты</a></div>
-				</nav>
+			<div class="nav-menu">
+				<div class="container">
+					<div class="row">
+						<img class="logo" src="img/icons/icons8-лес-color-32.png" alt="">
+						<nav>
+							<div><a href="#programma">Программа развлечений</a></div>
+							<div><a href="#сalendar">Календарь</a></div>
+							<div><a href="#phone">Контакты</a></div>
+						</nav>
+					</div>
+				</div>
 			</div>
 		</header>
-		<div class="main">
-			<div class="head">
-				<div class="head-image"></div>
-				<div class="title-text">
-					<div class="container">Дорогие друзья, приглашаем вас в гости к нам на дачу</div>
-				</div>
+
+		<div class="head">
+			<div class="head-image"></div>
+			<div class="title-text-dark">
+				<div class="container">Дорогие друзья, приглашаем вас в гости к нам на дачу</div>
 			</div>
-			<div class="сalendar">
-				<div class="container">
-					<div class="calendar-text">
-						<p>
-							Будем рады видеть вас в любое время с 1 июня по 31 августа
-						</p>
-						<p>
-							( рекомендуем ориентироваться на <a href="#modal"><span class="time__weather">погоду</span></a> )
-						</p>
-					</div>
-					<table id="calendar">
-						<thead>
-							<tr>
-								<td>‹</td>
-								<td colspan="5"></td>
-								<td>›</td>
-							</tr>
-							<tr>
-								<td>Пн</td>
-								<td>Вт</td>
-								<td>Ср</td>
-								<td>Чт</td>
-								<td>Пт</td>
-								<td>Сб</td>
-								<td>Вс</td>
-							</tr>
-						</thead>
-						<tbody></tbody>
-					</table>
-				</div>
+		</div>
+
+		<main id="programma">
+			<div class="title-text-light">
+				<div class="container">В программе (исключительно по желанию):</div>
 			</div>
 			<div class="programma">
-				<div class="title-text">
-					<div class="container">В программе (исключительно по желанию):</div>
-				</div>
-					<!-- <div class="list">
-						<div class="col modal-link timing__walk">
-							<a href="#modal">
-								<span class="text">Прогулки на природе</span>
-							</a>
-						</div>
-						<div class="col modal-link timing__bicycle"><span class="text">Катание на
-								велосипедах</span></div>
-						<div class="col modal-link timing__swimming"><span class="text">Купание в
-								речке</span>
-						</div>
-						<div class="col modal-link timing__lemonade"><span class="text">Домашний
-								лимонад</span>
-						</div>
-						<div class="col modal-link timing__vitamins"><span class="text">Живые витамины</span>
-						</div>
-						<div class="col modal-link timing__film"><span class="text">Вечерний фильм</span>
-						</div>
-						<div class="col modal-link timing__games"><span class="text">Настольные игры</span>
-						</div>
-						<div class="col modal-link timing__volleyball"><span class="text">Воллейбол,
-								бадминтон</span></div>
-						<div class="col modal-link tea__time"><span class="text">Задушевные беседы за
-								чашечкой
-								чая</span></div>
-						<div class="col modal-link timing__trip"><span class="text">Поездка куда-нибудь, куда
-								захочется</span></div>
-					</div> -->
 				<div class="list">
 					<div class="container">
 						<div class="row">
-							<div class="program-elem">
+							<div class="col program-elem">
 								<div class="col-image">
 									<img src='../img/list/1.jpg' alt="">
 								</div>
 								<div class="col-text">Прогулки на природе</div>
 							</div>
 						
-							<div class="col modal-link timing__walk">
-								<a href="#modal">
-									<span class="text">Прогулки на природе</span>
-								</a>
+							<div class="col program-elem">
+								<div class="col-image">
+									<img src='../img/list/4.jpg' alt="">
+								</div>
+								<div class="col-text">Катание на велосипедах</div>
 							</div>
-							<div class="col modal-link timing__bicycle"><span class="text">Катание на велосипедах</span></div>
-							<div class="col modal-link timing__swimming"><span class="text">Купание в речке</span></div>
-							<div class="col modal-link timing__lemonade"><span class="text">Домашний лимонад</span></div>
-							<div class="col modal-link timing__vitamins"><span class="text">Живые витамины</span></div>
-							<div class="col modal-link timing__film"><span class="text">Вечерний фильм</span></div>
-							<div class="col modal-link timing__games"><span class="text">Настольные игры</span></div>
-							<div class="col modal-link timing__volleyball"><span class="text">Воллейбол, бадминтон</span></div>
-							<div class="col modal-link tea__time"><span class="text">Задушевные беседы за чашечкой чая</span></div>
-							<div class="col modal-link timing__trip"><span class="text">Поездка куда-нибудь, куда захочется</span></div>
+
+							<div class="col program-elem">
+								<div class="col-image">
+									<img src='../img/list/3.jpg' alt="">
+								</div>
+								<div class="col-text">Купание в речке</div>
+							</div>
+
+							<div class="col program-elem">
+								<div class="col-image">
+									<img src='../img/list/5.jpg' alt="">
+								</div>
+								<div class="col-text">Домашний лимонад</div>
+							</div>
+
+							<div class="col program-elem">
+								<div class="col-image">
+									<img src='../img/list/6.jpg' alt="">
+								</div>
+								<div class="col-text">Живые витамины</div>
+							</div>
+
+							<div class="col program-elem">
+								<div class="col-image">
+									<img src='../img/list/7.jpg' alt="">
+								</div>
+								<div class="col-text">Вечерний фильм</div>
+							</div>
+
+							<div class="col program-elem">
+								<div class="col-image">
+									<img src='../img/list/10.jpg' alt="">
+								</div>
+								<div class="col-text">Настольные игры</div>
+							</div>
+
+							<div class="col program-elem">
+								<div class="col-image">
+									<img src='../img/list/8.jpg' alt="">
+								</div>
+								<div class="col-text">Воллейбол, бадминтон</div>
+							</div>
+
+							<div class="col program-elem">
+								<div class="col-image">
+									<img src='../img/list/11.jpg' alt="">
+								</div>
+								<div class="col-text">Задушевные беседы за чашечкой чая</div>
+							</div>
+
+							<div class="col program-elem">
+								<div class="col-image">
+									<img src='../img/list/9.jpg' alt="">
+								</div>
+								<div class="col-text">Поездка куда-нибудь, куда захочется</div>
+							</div>
+
 						</div>
 					</div>
 				</div>
 			</div>
+		</main>
+		<div id="сalendar" class="сalendar">
+			<div class="container">
+				<div class="calendar-text">
+					<p>
+						Будем рады видеть вас в любое время с 1 июня по 31 августа
+					</p>
+					<p>
+						( рекомендуем ориентироваться на <a href="#modal"><span class="time__weather">погоду</span></a> )
+					</p>
+				</div>
+				<table id="calendar">
+					<thead>
+						<tr>
+							<td>‹</td>
+							<td colspan="5"></td>
+							<td>›</td>
+						</tr>
+						<tr>
+							<td>Пн</td>
+							<td>Вт</td>
+							<td>Ср</td>
+							<td>Чт</td>
+							<td>Пт</td>
+							<td>Сб</td>
+							<td>Вс</td>
+						</tr>
+					</thead>
+					<tbody></tbody>
+				</table>
+			</div>
 		</div>
-
 		<footer>
 			<div class="container">
-				<div class="row">
-					<div>Александр 8-904-042-12-17</div>
-					<div>Ольга 8-920-299-47-85</div>
+				<div id="phone" class="row">
+					<div>
+						<a href="tel:+79040421217">Александр 8 904-042-12-17</a>
+					</div>
+					<div class="link">
+						<a target="_blank" href="https://icons8.com/icon/17593/лес">Лес</a> icon by <a target="_blank" href="https://icons8.com">Icons8</a>
+					</div>
+					<div>
+						<a href="tel:+79202994785">Ольга 8 920-299-47-85</a>
+					</div>
 				</div>
 			</div>
 		</footer>
@@ -153,12 +184,14 @@
 			</div>
 		</div> -->
 
-
-		<div id="weather" class="viget">
+	<div id="weather" class="weather">
+		<div class="viget">
 			<div class="header-viget">
 				<div class="close-viget"><a href="#closeX">X</a></div>
 			</div>
+			<div id="viget"></div>
 		</div>
+	</div>
 
 	<script src="js/script.js"></script>
 	<script src="js/modal_weather.js"></script>

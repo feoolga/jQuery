@@ -1,4 +1,15 @@
-const weatherBlock = document.querySelector('#weather')
+const modalBlock = document.querySelector('#weather')
+const weatherBlock = document.querySelector('#viget')
+
+const openWeather = document.querySelector('.time__weather')
+openWeather.addEventListener('click', function(){
+	modalBlock.classList.add('open')
+})
+
+const closeX = document.querySelector('.close-viget')
+closeX.addEventListener('click', function(){
+	modalBlock.classList.remove('open')
+})
 
 async function loadWeather() {
 	weatherBlock.innerHTML = '<div class="loading"> <img src="img/load.gif" alt="Loading..."></div>';
