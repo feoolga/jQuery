@@ -2,14 +2,7 @@
 @import url('viget_weater.css');
 @import url('style_calendar.css');
 
-header{
-	position: fixed;
-	top:0;
-	left:0;
-}
-
 header,footer{
-	width: 100%;
 	background-color: rgb(124,155,28);
 }
 
@@ -25,8 +18,7 @@ nav{
 }
 
 .wrapper{
-	max-width: 100%;
-	min-height: 100%;
+	width: 100%;
 	font-family: 'Caveat', cursive;
 	font-size: 30px;
 	color: white;
@@ -34,7 +26,6 @@ nav{
 
 .container{
 	width: 65%;
-
 	margin: 0 auto;
 	text-align: center;
 	line-height: 1;
@@ -43,14 +34,19 @@ nav{
 .row{
 	display: flex;
 	justify-content: space-between;
-	flex-wrap: wrap;
 	align-items: center;
-	gap: 40px 10px;
+}
+
+.list__row{
+	flex-wrap: wrap;
+	gap: 40px 40px;
+	justify-content: center;
+	align-items: start;
 }
 
 .col{
 	/* border: 1px solid red; */
-	flex: 0 0 30%;
+	width: 220px;
 }
 
 .nav-menu{
@@ -173,23 +169,29 @@ nav{
 
 .program-elem{
 	display: flex;
+	flex-direction: column;
 	justify-content: start;
 	align-items: center;
+	gap: 20px;
+		/* border: 1px solid black; */
 }
 
 .col-image{
 	flex-grow: 0;
 	flex-shrink: 0;
-    width: 120px;
-    height: 120px;
+    width: 150px;
+    height: 150px;
     border-radius: 50%;
     background-color: aqua;
     box-shadow: 0 0 15px 5px white;
 	overflow: hidden;
 	margin-right: 10px;
+	display: flex;
+	justify-content: center;
 }
 
 .col-image img{
+
     height: 100%;
 }
 
@@ -203,4 +205,53 @@ nav{
 
 .link{
 	font-size: 13px;
+}
+
+footer {
+	padding-bottom: 5px;
+}
+
+.contact span{
+	display: inline-block;
+		/* border: 1px solid black; */
+	margin: 2px 8px;
+	padding: 0;
+}
+
+@media screen and (max-width:425px){
+	.nav-menu .container {
+		width: 95%;
+	}
+
+	.logo {
+		display: none;
+	}
+
+	nav{
+		justify-content:space-between;
+		margin: 0 auto;
+	/* border: 1px solid black; */
+	}
+
+	.container{
+		width: 90%;
+	}
+
+	.title-text-dark{
+		padding: 8px 0;
+		font-size: 30px;
+	}
+
+	.title-text-light{
+		padding: 5px 0 3px;
+		font-size: 20px;
+	}
+
+	.contact span{
+		font-size: 22px;
+	}
+
+	footer .container {
+		width: 95%;
+	}
 }
