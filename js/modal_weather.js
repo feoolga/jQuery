@@ -1,14 +1,23 @@
 const modalBlock = document.querySelector('#weather')
 const weatherBlock = document.querySelector('#viget')
+const gismeteo = 'https://www.gismeteo.ru/weather-timiryazevo-133937/month/'
 
 const openWeather = document.querySelector('.time__weather')
 openWeather.addEventListener('click', function(){
 	modalBlock.classList.add('open')
 })
 
-const closeX = document.querySelector('.close-viget')
-closeX.addEventListener('click', function(){
+function closeModal(){
 	modalBlock.classList.remove('open')
+}
+
+const closeX = document.querySelector('.close-viget')
+closeX.addEventListener('click', closeModal)
+
+modalBlock.addEventListener("click", function (e) {
+	if (!e.target.closest('.viget')){
+		closeModal()
+	}
 })
 
 async function loadWeather() {
@@ -42,12 +51,13 @@ function getWeather(data) {
 	let weatherIcon = data.weather[0].icon
 
 	const template = `
-		<div class="city">${location}</div>
+		<div class="city"><span>${location}</span><span class="weather__small"> сегодня</span></div>
 		<div class="row">
 			<div>${weath}</div>
 			<img class="icon" src="https://openweathermap.org/img/w/${weatherIcon}.png" alt="">
 		</div>
 		<div class="temper">${temp}</div>
+		<div id="giz" class="giz"><a href="${gismeteo}" target="_blank">Погода на даче на месяц</a></div>
 	`
 	weatherBlock.innerHTML = template;
 }

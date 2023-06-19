@@ -89,10 +89,11 @@ nav{
 
 .time__weather{
 	display: inline-block;
-	font-size: 20px;
+	font-size: 23px;
 	color: rgb(44, 86, 122);
 	/* transform-origin: bottom left; */
 	transition: transform 0.2s;
+	padding-left: 7px;
 }
 .time__weather:hover{
 	transform: scale(1.1);

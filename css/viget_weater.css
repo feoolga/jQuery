@@ -19,10 +19,11 @@
 	color: azure;
 	background-color: rgb(80, 105, 3);
 	border-radius: 10px;
-	margin: 30px auto;
+	margin: 100px auto;
 	font-family: 'Comforter', cursive;
 	font-family: 'Open Sans', sans-serif;
 	padding: 20px;
+	box-shadow: 0 0 15px 5px white;
 	overflow-y: auto;
 	overflow-x: hidden;
 	transition: all 0.8s ease 0s;
@@ -31,6 +32,11 @@
 .header-viget{
 	display: flex;
 	justify-content: end;
+}
+
+.weather__small{
+	font-size: 20px;
+	padding-left: 10px;
 }
 
 .loading {
@@ -57,3 +63,11 @@
 	content: '0';
 	font-size:0.5em; vertical-align:top;
 }
+
+.giz{
+	display: inline-block;
+	margin-top: 10px;
+	padding: 5px;
+	border: 1px solid white;
+	border-radius: 5px;
+  }
