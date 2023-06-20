@@ -6,7 +6,7 @@
 	left: 0;
 	opacity: 0;
 	visibility: hidden;
-	background-color: rgba(0, 0, 0, 0.5)
+	background-color: rgba(0, 0, 0, 0.7)
 }
 
 .weather.open{
@@ -15,7 +15,7 @@
 }
 
 .viget{
-	max-width: 75%;
+	max-width: 600px;
 	color: azure;
 	background-color: rgb(80, 105, 3);
 	border-radius: 10px;
@@ -23,7 +23,7 @@
 	font-family: 'Comforter', cursive;
 	font-family: 'Open Sans', sans-serif;
 	padding: 20px;
-	box-shadow: 0 0 15px 5px white;
+	box-shadow: 0 0 20px 5px white;
 	overflow-y: auto;
 	overflow-x: hidden;
 	transition: all 0.8s ease 0s;
@@ -71,3 +71,9 @@
 	border: 1px solid white;
 	border-radius: 5px;
   }
+
+  @media screen and (max-width:425px){
+	.viget{
+		max-width: 80%;
+	}
+}
