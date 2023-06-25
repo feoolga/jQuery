@@ -2,6 +2,10 @@ const modalBlock = document.querySelector('#weather')
 const weatherBlock = document.querySelector('#viget')
 const gismeteo = 'https://www.gismeteo.ru/weather-timiryazevo-133937/month/'
 
+let months = ["Января", "Февраля", "Марта", "Апреля", "Мая", "Июня", "Июля", "Августа", "Сентября", "Октября", "Ноября", "Декабря"];
+let date = new Date()
+let today = date.getDate() + ' ' + months[date.getMonth()]
+
 const openWeather = document.querySelector('.time__weather')
 openWeather.addEventListener('click', function(){
 	modalBlock.classList.add('open')
@@ -51,7 +55,7 @@ function getWeather(data) {
 	let weatherIcon = data.weather[0].icon
 
 	const template = `
-		<div class="city"><span>${location}</span><span class="weather__small"> сегодня</span></div>
+		<div class="city"><span>${location}</span><span class="weather__small"> сегодня ${today}</span></div>
 		<div class="row">
 			<div>${weath}</div>
 			<img class="icon" src="https://openweathermap.org/img/w/${weatherIcon}.png" alt="">

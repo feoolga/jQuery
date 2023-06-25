@@ -1,6 +1,29 @@
+
 @import url('style_null.css');
 @import url('style_weather.css');
 @import url('style_calendar.css');
+
+@font-face {
+	font-family: "comfortaa-3d";
+	src: url(../fonts/Comfortaa/Comfortaa-VariableFont_wght.ttf);
+	font-weight: 400;
+}
+
+@font-face {
+	font-family: "kablammo-3d";
+	src: url(../fonts/Kablammo/Kablammo-Regular-VariableFont_MORF.ttf);
+	font-weight: 400;
+}
+
+@font-face {
+	font-family: 'merriweather-3d';
+	src: url(../fonts/merriweather-regular-italic.woff2);
+}
+
+:root {
+	--index: calc(1vw + 1vh);
+	--transition: .5s cubic-besier(.05, .5, 0, 1);
+}
 
 header,footer{
 	background-color: rgb(124,155,28);
@@ -58,6 +81,81 @@ nav{
 	width: 32px;
 }
 
+/* Трехмерная панорама */
+
+.layers{
+	background-color: black;
+	font-family: "comfortaa-3d";
+	perspective: 1000px;
+	overflow: hidden;
+	position: relative;
+}
+
+.head__logo{
+	width: calc(var(--index) * 13);
+	height: calc(var(--index) * 13);
+	background-size: contain;
+	background-repeat: no-repeat;
+	position: absolute;
+	top: 50%;
+	left: 50%;
+	transform: translate(-50%, -95%); 
+	z-index: 1;
+	margin: 0 auto ;
+}
+
+.layers__container{
+	height: calc(var(--index) * 20);
+	transform-style: preserve-3d;
+	transform: rotateX(var(--move-y)) rotateY(var(--move-x));
+	will-change: transform;
+	transition: transform var(--transition);
+}
+
+.layers__item{
+	position: absolute;
+	inset: -5vw;
+	background-size: cover;
+	background-position: center;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+}
+
+.hero-content{
+	font-size: calc(var(--index) * 2.5);
+	text-align: center;
+	margin: 0 calc(var(--index) * 3.5);
+}
+
+.layer-1{
+	transform: translateZ(-55px) scale(1.06);
+}
+
+.layer-2{
+	transform: translateZ(80px) scale(.8);
+}
+
+.layer-3{
+	transform: translateZ(180px) scale(.88);
+}
+
+.layer-4{
+	transform: translateZ(190px) scale(.9);
+}
+
+.layer-5{
+	transform: translateZ(300px) scale(.9);
+}
+
+.layer-6{
+	transform: translateZ(380px);
+}
+.layer-4, .layer-5, .layer-6 {
+	pointer-events: none;
+}
+
+
 .title-text-dark{
 	background-color: rgba(113, 143, 22, 1);
 	padding: 10px 0;
@@ -72,16 +170,12 @@ nav{
 	font-family: 'Neucha', cursive;
 }
 
-/* .head{
-
-} */
-
-.head-image{
+/* .head-image{
 	background-image: url("../img/Fon_2.jpg");
 	background-size: 100% auto;
 	background-position: left 20%;
 	height: 200px;
-}
+} */
 
 .list .container {
 	padding: 15px;
@@ -108,10 +202,11 @@ nav{
 	background-blend-mode:screen;
 }
 
-.programma .container{
+.programma-container{
 	/* border: 1px solid black; */
-	width: 70%;
+	/* width: 70%; */
 	background-color: rgba(113, 143, 22, 0.6);
+	padding: calc(var(--index) * 3);
 }
 
 .title{
@@ -174,7 +269,6 @@ nav{
 	justify-content: start;
 	align-items: center;
 	gap: 20px;
-		/* border: 1px solid black; */
 }
 
 .col-image{
@@ -189,11 +283,30 @@ nav{
 	margin-right: 10px;
 	display: flex;
 	justify-content: center;
+	transition: all 0.5s;
+}
+
+.col-image:hover{
+	transform: scale(110%);
+	box-shadow: 0 0 20px 10px white;
+	cursor: pointer;
 }
 
 .col-image img{
-
     height: 100%;
+}
+
+.col-image.opened{
+	z-index: 2;
+	width: 400px;
+    height: 300px;
+	border-radius: 0;
+
+	overflow: hidden;
+	margin: 100px;
+	/* position: absolute;
+	top: 10%;
+	left: 40%; */
 }
 
 .col-text{
@@ -204,19 +317,72 @@ nav{
     color: white;
 }
 
-.link{
-	font-size: 13px;
-}
-
 footer {
 	padding-bottom: 5px;
+	/* text-align: center; */
 }
 
 .contact span{
 	display: inline-block;
 		/* border: 1px solid black; */
 	margin: 2px 8px;
-	padding: 0;
+	/* padding-top: 5px; */
+}
+
+.footer-link{
+	font-size: 13px;
+	padding-top: 7px;
+}
+
+/* Большие картинки */
+	.large-img{
+		width: 100%;
+		height: 100%;
+		background-color: rgba(0,0,0,0.5);
+		position: fixed;
+		top: 0;
+		left: 0;
+		opacity: 0;
+		visibility: hidden;
+	}
+
+	.large-img.open{
+		opacity: 1;
+		visibility: visible;
+	}
+
+	.large-img__card{
+		width: 70%;
+		height: auto;
+		margin: calc(var(--index) * 3) auto;
+		border-radius: calc(var(--index) * 3);
+		overflow: hidden;
+	}
+
+	.large-img__card img{
+		width: 100%;
+		height: auto;
+	}
+
+/* Большие картинки-конец */
+
+@media screen and (max-width:768px){
+	footer .row{
+		flex-direction: column;
+	}
+
+	.footer-alex{
+		order: 1;
+	}
+	
+	.footer-olga{
+		order: 2;
+	}
+	
+	.footer-link{
+		order: 3;
+		font-size: 13px;
+	}
 }
 
 @media screen and (max-width:425px){
