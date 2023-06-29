@@ -364,6 +364,10 @@ footer {
 		height: auto;
 	}
 
+	.messenger-links img{
+		padding: 5px;
+	}
+
 /* Большие картинки-конец */
 
 @media screen and (max-width:768px){
